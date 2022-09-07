@@ -1,0 +1,123 @@
+.hero {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  grid-template-rows: 1fr;
+
+  transition: all 2s;
+  &__body {
+    padding: 0 15rem;
+    min-width: 100%;
+
+    background: linear-gradient(135deg, $color-white-2, $color-white-2);
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo__comtainer {
+    margin: 4rem 0 10rem 0;
+  }
+
+  &__logo {
+    width: 15rem;
+  }
+
+  &__main-title,
+  &__light-title {
+    padding-bottom: 2.5rem;
+    font-size: 6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.5rem;
+    color: $color-desaturated-Red;
+  }
+
+  &__main-title {
+    font-weight: 600;
+    color: #413839;
+  }
+
+  &__paragraph {
+    margin-bottom: 4rem;
+    width: 45rem;
+    line-height: 2.5rem;
+    color: $color-desaturated-Red;
+  }
+
+  &__form-group {
+    padding-bottom: 1rem;
+    width: 45rem;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-text {
+    width: 100%;
+    padding: 1.5rem 10.5rem 1.5rem 3rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    border-radius: 50rem;
+    border: #d9cacd 0.2rem solid;
+    outline: none;
+    color: #413839;
+    background-color: transparent;
+
+    &::placeholder {
+      color: #d9cacd;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 23%;
+  }
+
+  &__btn {
+    padding: 1.4rem 4rem;
+    border-radius: 50rem;
+    border: none;
+    outline: none;
+    background: linear-gradient(
+      to right,
+      $color-very-light-red,
+      $color-light-red
+    );
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    right: -1%;
+    &:hover {
+      background: $color-very-light-red;
+      box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+  }
+
+  &__error-message {
+    padding-left: 3.2rem;
+    font-size: 1.3rem;
+    color: $color-soft-red;
+  }
+
+  &__img-container {
+    background-color: red;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.invalid__email {
+  padding-right: 13rem;
+  border-color: $color-soft-red;
+}
+
+.hide {
+  display: none;
+}

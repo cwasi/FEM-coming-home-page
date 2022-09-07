@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon-32x32.png">
-    <link rel="stylesheet" href="src/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/img/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
     <title>Frontend Mentor | Base Apparel Coming Soon</title>
-</head>
-<body>
-    <h1>Frontend Mentor | Base Apparel Coming Soon</h1>
-</body>
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <div class="hero__body">
+          <div class="hero__logo__comtainer">
+            <img src="src/img/logo.svg" alt="company logo" class="hero__logo" />
+          </div>
+
+          <div class="hero__light-title">we're</div>
+          <div class="hero__main-title">
+            coming <br />
+            soon
+          </div>
+          <div class="hero__paragraph">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </div>
+          <form action="#" class="hero__form">
+            <div class="hero__form-group">
+              <input
+                type="text"
+                id="email"
+                class="hero__input-text"
+                placeholder="Email Address"
+              />
+              <div class="hero__icon">
+                <img
+                  src="src/img/icon-error.svg"
+                  alt="error icon"
+                  class="hide"
+                  id="icon"
+                />
+              </div>
+              <button type="submit"  id="submit" class="hero__btn">
+                <img src="src/img/icon-arrow.svg" alt="right arrow image"/>
+              </button>
+            </div>
+            <p class="hero__error-message hide" id="error-message">
+              Please provide a valid email
+            </p>
+          </form>
+        </div>
+        <div class="hero__img-container">
+          <img
+            src="src/img/hero-desktop.jpg"
+            alt="Photo of a girl"
+            class="hero__img"
+          />
+        </div>
+      </div>
+    </main>
+    <script src="src/js/index.js"></script>
+  </body>
 </html>
