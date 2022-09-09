@@ -15,10 +15,19 @@ body {
 
 html {
   font-size: 62.5%;
+  @media only screen and (max-width: 907px) {
+    font-size: 50%;
+  }
 }
 
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
+  @media only screen and (max-width: 907px) {
+    font-size: 2rem;
+  }
+}
+main {
+  height: 100%;
 }

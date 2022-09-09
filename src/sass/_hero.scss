@@ -1,34 +1,78 @@
 .hero {
+  height: 100%;
   display: grid;
   grid-template-columns: 60% 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 15rem;
 
+  @media only screen and(max-width:907px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem 40rem 1fr;
+  }
   transition: all 2s;
   &__body {
-    padding: 0 15rem;
-    min-width: 100%;
-
+    padding: 5rem 15rem 0;
     background: linear-gradient(135deg, $color-white-2, $color-white-2);
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-row: 2 / 3;
+
+    @media only screen and(max-width: 1250px) {
+      padding: 5rem 10rem 0;
+    }
+    @media only screen and(max-width:1161px) {
+      padding: 5rem 6rem 0;
+    }
+    @media only screen and(max-width:1079px) {
+      padding: 5rem 5rem 0;
+    }
+    @media only screen and(max-width:907px) {
+      height: 75rem;
+      padding: 8rem 0 0;
+      grid-row: 3 / -1;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    width: 45rem;
   }
 
   &__logo__comtainer {
-    margin: 4rem 0 10rem 0;
+    display: flex;
+    padding-left: 15rem;
+    background: linear-gradient(135deg, $color-white-2, $color-white-2);
+
+    @media only screen and(max-width: 1250px) {
+      padding-left: 10rem;
+    }
+    @media only screen and(max-width:1161px) {
+      padding-left: 6rem;
+    }
+    @media only screen and(max-width:1079px) {
+      padding-left: 5rem;
+    }
+    @media only screen and(max-width:907px) {
+      grid-row: 1 / 2;
+      background: none;
+    }
   }
 
   &__logo {
+    align-self: center;
     width: 15rem;
   }
 
-  &__main-title,
-  &__light-title {
+  &__title {
     padding-bottom: 2.5rem;
     font-size: 6rem;
-    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1.5rem;
+  }
+
+  &__light-title {
+    font-weight: 300;
     color: $color-desaturated-Red;
   }
 
@@ -39,14 +83,15 @@
 
   &__paragraph {
     margin-bottom: 4rem;
-    width: 45rem;
     line-height: 2.5rem;
     color: $color-desaturated-Red;
+    @media only screen and (max-width: 907px) {
+      line-height: 3rem;
+    }
   }
 
   &__form-group {
     padding-bottom: 1rem;
-    width: 45rem;
     position: relative;
 
     display: flex;
@@ -54,7 +99,8 @@
   }
 
   &__input-text {
-    width: 100%;
+    width: 99%;
+    height: 100%;
     padding: 1.5rem 10.5rem 1.5rem 3rem;
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.7rem;
@@ -64,15 +110,22 @@
     outline: none;
     color: #413839;
     background-color: transparent;
-
     &::placeholder {
       color: #d9cacd;
+    }
+
+    @media only screen and (max-width: 907px) {
+      padding: 2.3rem 10.5rem 2.3rem 3rem;
+      font-size: 2rem;
     }
   }
 
   &__icon {
     position: absolute;
     right: 23%;
+    @media only screen and (max-width: 907px) {
+      right: 25%;
+    }
   }
 
   &__btn {
@@ -88,22 +141,32 @@
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 
     position: absolute;
-    right: -1%;
+    right: 0%;
     &:hover {
       background: $color-very-light-red;
       box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
       cursor: pointer;
     }
+
+    @media only screen and (max-width: 907px) {
+      padding: 2.2rem 4.5rem;
+    }
   }
 
   &__error-message {
     padding-left: 3.2rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: $color-soft-red;
+    @media only screen and (max-width: 907px) {
+      text-align: left;
+    }
   }
 
   &__img-container {
-    background-color: red;
+    grid-row: 1 / span 2;
+    @media only screen and(max-width:907px) {
+      grid-row: 2 / 3;
+    }
   }
 
   &__img {
@@ -111,13 +174,4 @@
     height: 100%;
     object-fit: cover;
   }
-}
-
-.invalid__email {
-  padding-right: 13rem;
-  border-color: $color-soft-red;
-}
-
-.hide {
-  display: none;
 }

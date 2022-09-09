@@ -1,0 +1,11 @@
+.invalid__email {
+  padding-right: 13rem;
+  border-color: $color-soft-red;
+  @media only screen and (max-width: 907px) {
+    padding-right: 14.5rem;
+  }
+}
+
+.hide {
+  display: none;
+}

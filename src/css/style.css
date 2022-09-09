@@ -1,42 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+.attribution {
+  margin-bottom: 2rem;
+  text-align: center; }
+
 .hero {
+  height: 100%;
   display: grid;
   grid-template-columns: 60% 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 15rem;
   transition: all 2s; }
+  @media only screen and (max-width: 907px) {
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: 10rem 40rem 1fr; } }
   .hero__body {
-    padding: 0 15rem;
-    min-width: 100%;
+    padding: 5rem 15rem 0;
     background: linear-gradient(135deg, #fff5f5, #fff5f5);
-    display: flex;
-    flex-direction: column; }
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-row: 2 / 3; }
+    @media only screen and (max-width: 1250px) {
+      .hero__body {
+        padding: 5rem 10rem 0; } }
+    @media only screen and (max-width: 1161px) {
+      .hero__body {
+        padding: 5rem 6rem 0; } }
+    @media only screen and (max-width: 1079px) {
+      .hero__body {
+        padding: 5rem 5rem 0; } }
+    @media only screen and (max-width: 907px) {
+      .hero__body {
+        height: 75rem;
+        padding: 8rem 0 0;
+        grid-row: 3 / -1;
+        text-align: center;
+        justify-content: center; } }
+  .hero__content {
+    width: 45rem; }
   .hero__logo__comtainer {
-    margin: 4rem 0 10rem 0; }
+    display: flex;
+    padding-left: 15rem;
+    background: linear-gradient(135deg, #fff5f5, #fff5f5); }
+    @media only screen and (max-width: 1250px) {
+      .hero__logo__comtainer {
+        padding-left: 10rem; } }
+    @media only screen and (max-width: 1161px) {
+      .hero__logo__comtainer {
+        padding-left: 6rem; } }
+    @media only screen and (max-width: 1079px) {
+      .hero__logo__comtainer {
+        padding-left: 5rem; } }
+    @media only screen and (max-width: 907px) {
+      .hero__logo__comtainer {
+        grid-row: 1 / 2;
+        background: none; } }
   .hero__logo {
+    align-self: center;
     width: 15rem; }
-  .hero__main-title, .hero__light-title {
+  .hero__title {
     padding-bottom: 2.5rem;
     font-size: 6rem;
-    font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 1.5rem;
+    letter-spacing: 1.5rem; }
+  .hero__light-title {
+    font-weight: 300;
     color: #ce9797; }
   .hero__main-title {
     font-weight: 600;
     color: #413839; }
   .hero__paragraph {
     margin-bottom: 4rem;
-    width: 45rem;
     line-height: 2.5rem;
     color: #ce9797; }
+    @media only screen and (max-width: 907px) {
+      .hero__paragraph {
+        line-height: 3rem; } }
   .hero__form-group {
     padding-bottom: 1rem;
-    width: 45rem;
     position: relative;
     display: flex;
     align-items: center; }
   .hero__input-text {
-    width: 100%;
+    width: 99%;
+    height: 100%;
     padding: 1.5rem 10.5rem 1.5rem 3rem;
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.7rem;
@@ -48,9 +94,16 @@
     background-color: transparent; }
     .hero__input-text::placeholder {
       color: #d9cacd; }
+    @media only screen and (max-width: 907px) {
+      .hero__input-text {
+        padding: 2.3rem 10.5rem 2.3rem 3rem;
+        font-size: 2rem; } }
   .hero__icon {
     position: absolute;
     right: 23%; }
+    @media only screen and (max-width: 907px) {
+      .hero__icon {
+        right: 25%; } }
   .hero__btn {
     padding: 1.4rem 4rem;
     border-radius: 50rem;
@@ -59,17 +112,26 @@
     background: linear-gradient(to right, #f8bfbf, #ee8c8c);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     position: absolute;
-    right: -1%; }
+    right: 0%; }
     .hero__btn:hover {
       background: #f8bfbf;
       box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
       cursor: pointer; }
+    @media only screen and (max-width: 907px) {
+      .hero__btn {
+        padding: 2.2rem 4.5rem; } }
   .hero__error-message {
     padding-left: 3.2rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #f96262; }
+    @media only screen and (max-width: 907px) {
+      .hero__error-message {
+        text-align: left; } }
   .hero__img-container {
-    background-color: red; }
+    grid-row: 1 / span 2; }
+    @media only screen and (max-width: 907px) {
+      .hero__img-container {
+        grid-row: 2 / 3; } }
   .hero__img {
     width: 100%;
     height: 100%;
@@ -78,6 +140,9 @@
 .invalid__email {
   padding-right: 13rem;
   border-color: #f96262; }
+  @media only screen and (max-width: 907px) {
+    .invalid__email {
+      padding-right: 14.5rem; } }
 
 .hide {
   display: none; }
@@ -95,8 +160,17 @@ body {
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 907px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   font-weight: 400; }
+  @media only screen and (max-width: 907px) {
+    body {
+      font-size: 2rem; } }
+
+main {
+  height: 100%; }
